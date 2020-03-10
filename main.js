@@ -63,7 +63,7 @@ const header = `
                                                       
 easy HNS airdrop claimer
 v0.0.2
-source: https://github.com/bitclaimr/handshakr/blob/master/main.js`
+source: https://github.com/bitclaimr/bitclaimr/blob/master/main.js`
 
 async function createKeyProofs(options) {
   assert(options != null && options.key != null);
