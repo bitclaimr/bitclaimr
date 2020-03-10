@@ -603,7 +603,7 @@ const main = async () => {
   console.log(chalk.magentaBright(boxen(
     chalk.bold('🎉 All done! 🎉') + '\n' +
     'Your proof has been submitted. We \'ll send you an email with your gift card soon!' + '\n' +
-    chalk.bold(`Questions?`) + ' Email support@bitclaimr.io.'
+    chalk.bold(`Questions?`) + ' Email support@bitclaimr.io'
     , {padding: 1, margin: {top: 1, bottom: 1}, align: 'center'})));
 };
 
