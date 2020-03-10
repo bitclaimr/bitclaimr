@@ -595,7 +595,8 @@ const tasks = new Listr([
           proof,
           referrer,
           email: ctx.email,
-        }
+        },
+        timeout: 20000,
       });
       const json = await res.json();
       ctx.proofId = json.proofId;
