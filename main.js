@@ -568,7 +568,19 @@ const tasks = new Listr([
     }
   },
   {
-    title: 'Proof created! Sending proof...',
+    title: 'Valid proof found! We\'ll need your email to send you your gift card.',
+    task: (ctx, task) => inquirer([
+			{
+        type: 'input',
+        name: 'email',
+        message: `Enter your email address then hit ENTER.`,
+      },
+		], function (answers) {
+      ctx.email = answers.email;
+		})
+  },
+  {
+    title: 'Sending proof...',
     task: async (ctx) => {
       let referrer = '';
       if (ctx['--referrer']) {
@@ -582,6 +594,7 @@ const tasks = new Listr([
           base64: proof.toBase64(),
           proof,
           referrer,
+          email: ctx.email,
         }
       });
       const json = await res.json();

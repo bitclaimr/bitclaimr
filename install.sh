@@ -23,7 +23,7 @@ curl -o "$WORKDIR/bitclaimr.zip" -L --progress-bar "https://github.com/bitclaimr
 unzip -q -d $WORKDIR "$WORKDIR/bitclaimr.zip"
 cd "$WORKDIR/bitclaimr-master"
 
-echo '-- Installing dependencies...'
+echo '-- Installing dependencies... (this may take a few minutes)'
 npm install -s --no-audit &> /dev/null
 
 echo '-- Starting helper...'
